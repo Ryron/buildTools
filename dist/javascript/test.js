@@ -1,1 +1,6 @@
-!function(){console.log("测试。。。。")}();
+/**
+ * 测试js
+ */
+(function(){
+  console.log('测试。。。。');
+})();

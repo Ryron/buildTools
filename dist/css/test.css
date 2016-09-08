@@ -1,1 +1,7 @@
-body,html{height:100%}
+/**
+ * 测试css
+ */
+html,
+body {
+  height: 100%;
+}
