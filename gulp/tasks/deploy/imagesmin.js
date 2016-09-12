@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
-    config = require('../config');
+    config = require('../../config');
 gulp.task('imagesmin', function(){
     return gulp.src(config.images.src)                //images源文件
                .pipe(imagemin())

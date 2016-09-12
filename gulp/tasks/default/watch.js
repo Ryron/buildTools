@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
-    config = require('../config'),
+    config = require('../../config'),
     livereload = require('gulp-livereload'),
     browserSync = require('browser-sync'),
     reload =browserSync.reload;

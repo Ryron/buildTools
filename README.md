@@ -17,6 +17,11 @@ gulp/
 │   │
 │   ├── gulp            
 │   │   ├── tasks       "gulp 任务"
+│   │   │   ├── default       "默认任务文件夹"
+│   │   │   ├── deploy        "部署任务文件夹"
+│   │   │   ├── default.js    "默认任务启动js"
+│   │   │   ├── deploy.js     "部署任务启动js"
+│   │   │   └── sprite.js     "雪碧图js"
 │   │   └── config.js   "gulp任务配置"
 │   │
 │   ├── node_modules    "模块"

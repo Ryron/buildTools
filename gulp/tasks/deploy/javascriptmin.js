@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
-    config = require('../config');
+    config = require('../../config');
 gulp.task('javascriptmin', function(){
     return gulp.src(config.javascript.src)
                .pipe(uglify())

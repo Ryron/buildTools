@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
-    htmlmin = require('gulp-htmlmin');
-    config = require('../config');
+    htmlmin = require('gulp-htmlmin'),
+    fileVersion = require('gulp-fileversion'),
+    config = require('../../config');
 gulp.task('htmlmin', function(){
     return gulp.src(config.html.src)
                .pipe(htmlmin(config.html.settings))
