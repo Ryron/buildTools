@@ -4,5 +4,6 @@ var gulp = require('gulp'),
 gulp.task('htmlmin', function(){
     return gulp.src(config.html.src)
                .pipe(htmlmin(config.html.settings))
+               .pipe(fileVersion({ 'verName': 'ver' }))
                .pipe(gulp.dest(config.html.dest))   //输出目录
 });

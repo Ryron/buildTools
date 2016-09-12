@@ -12,9 +12,9 @@ gulp/
 │   ├── dist            "输出文件"
 │   │   ├── css              
 │   │   ├── html  
-│   │   ├── images 
+│   │   ├── images
 │   │   └── javascript    
-│   │ 
+│   │
 │   ├── gulp            
 │   │   ├── tasks       "gulp 任务"
 │   │   └── config.js   "gulp任务配置"
@@ -36,6 +36,7 @@ gulp/
 - watch     监听需要编译文件
 - default   默认任务，与watch一起用
 - deploy    部署前调用，主要是压缩文件
+- sprite    雪碧图
 
 ### 3.使用插件
 | 插件          |    作用          | 备注            |
@@ -48,6 +49,8 @@ gulp/
 |  gulp-uglify  | js压缩           |                 |
 |  gulp-rename  | 重命名           |                 |
 |  gulp-watch   | 监听             |                 |
+| gulp.spritesmith| 雪碧图         |                 |
+| gulp-fileversion| 版本号         |                 |
 
 ### 4.代码
  [链接](https://github.com/Ryron/gulp)

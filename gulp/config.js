@@ -34,5 +34,11 @@ module.exports = {
     src:src+"/images/**/*",
     dest:dest+"/images",
     settings:{}
+  },
+  icon:{
+    all:src+"/images/icon/*",
+    src:src+"/images/icon/*",
+    dest:dest+"/images/icon",
+    settings:{}
   }
 }
