@@ -1,7 +1,11 @@
-var src = './src';
-var dest = './dist';
-
+var src = './src',
+    dest = './dist';
+    
 module.exports = {
+  options:{
+    string: 'env',
+    default: { env: process.env.NODE_ENV || 'development' }
+  },
   less:{
     all:src+"/less/**/*.less",
     src:src+"/less/*.less",
@@ -39,6 +43,12 @@ module.exports = {
     all:src+"/images/icon/*",
     src:src+"/images/icon/*",
     dest:dest+"/images/icon",
+    settings:{}
+  },
+  manifest:{
+    all:"./gulp/manifest.json",
+    src:"./gulp/manifest.json",
+    dest:"",
     settings:{}
   }
 }
