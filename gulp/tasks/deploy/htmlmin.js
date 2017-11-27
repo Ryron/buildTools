@@ -1,11 +1,16 @@
-var gulp = require('gulp'),
-    htmlmin = require('gulp-htmlmin'),
-    fileVersion = require('gulp-fileversion'),
-    revCollector = require('gulp-rev-collector'),
-    config = require('../../config');
-gulp.task('htmlmin', function(){
-    return gulp.src(config.html.src)
-               //.pipe(htmlmin(config.html.settings))
-               .pipe(fileVersion({ 'verName': 'ver' }))
-               .pipe(gulp.dest(config.html.dest))   //输出目录
+var gulp = require('gulp');
+var htmlmin = require('gulp-htmlmin');
+// var fileVersion = require('gulp-fileversion');
+var revCollector = require('gulp-rev-collector');
+var config = require('../../config');
+gulp.task('htmlmin', function() {
+	return gulp.src(['./rev/**/*.json', config.html.src])
+		.pipe(revCollector({
+	        replaceReved: true
+	    }))
+		// .pipe(fileVersion({
+		// 	'verName': 'ver'
+		// }))
+		.pipe(htmlmin(config.html.settings))
+		.pipe(gulp.dest(config.html.dest)) //输出目录
 });

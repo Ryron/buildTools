@@ -182,4 +182,5 @@ Icon
 
 ## Front-end ignore file
 /node_modules
+/dist
 
