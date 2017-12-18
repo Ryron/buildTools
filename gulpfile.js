@@ -1,5 +1,13 @@
-﻿var requireDir = require('require-dir');
-
+﻿let gulp = require('gulp');
+let requireDir = require('require-dir');
+let Server = require('karma').Server;
 requireDir('./gulp/tasks');
-
-var gulp = require('gulp');
+/**
+ * Run test once and exit
+ */
+gulp.task('test', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done).start();
+});
